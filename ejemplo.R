@@ -30,6 +30,7 @@ sd6 <- diag(c(sqrt(datos[6,3]),sqrt(datos[6,5]),sqrt(datos[6,7])))
 sd <- list(sd1,sd2,sd3,sd4,sd5,sd6)
 
 # Matrices de correlacion:
+library(miscTools)
 matrices.correlacion <- corr.matrix.gen.3vars(5,c(rbeta(5,0.5,0.6),runif(5,0.2,1),runif(5,-1,1)),2014)
 lapply(matrices.correlacion,det)
 # Matrices de correlacion corregidas:
